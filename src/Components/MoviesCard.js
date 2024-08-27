@@ -1,6 +1,7 @@
 import React from 'react'
 import { CDN_IMG } from '../Utilities/constants'
 
+
 const MoviesCard = ({photo}) => {
 
     console.log(photo, "photo")
