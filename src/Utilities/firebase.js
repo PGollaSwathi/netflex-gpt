@@ -3,19 +3,24 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
 import { getAuth } from "firebase/auth";
+
+// require('dotenv').config({ path: '../../.env' });
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+console.log(process.env,"process.env")
+
 const firebaseConfig = {
-  apiKey: "AIzaSyB-0BOc7fEhQ5Iih7cniBgnhpg1ZGLl4fI",
-  authDomain: "netflex-b9a3e.firebaseapp.com",
-  projectId: "netflex-b9a3e",
-  storageBucket: "netflex-b9a3e.appspot.com",
-  messagingSenderId: "511900298296",
-  appId: "1:511900298296:web:78154a1c73c35b59c40acd",
-  measurementId: "G-228FZ1007Z"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId:process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
+  measurementId: process.env.REACT_APP_measurementId
 };
 
 // Initialize Firebase

@@ -2,7 +2,9 @@ import React from 'react'
 
 const GptData = () => {
   return (
-    <div>GptData</div>
+    <div>
+        <h1>Git Search Bar</h1>
+    </div>
   )
 }
 
