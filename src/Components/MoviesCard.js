@@ -4,10 +4,10 @@ import { CDN_IMG } from '../Utilities/constants'
 
 const MoviesCard = ({photo}) => {
 
-    console.log(photo, "photo")
+    // console.log(photo, "photo")
   return (
-    <div className='playing_images'>
-     <img  className='w-44 h-44' alt='logo' src={CDN_IMG + photo}/>
+    <div>
+     <img  className='max-w-none w-44 h-auto p-2' alt='logo' src={CDN_IMG + photo}/>
     </div>
   )
 }

@@ -16,7 +16,7 @@ const dispatch = useDispatch()
     // console.log(json.results ,"json data")
     dispatch(addNowPlayingMovies(json.results))
     }catch(e){
-      console.log(e, "naga")
+      console.log(e)
     }
   }
 }

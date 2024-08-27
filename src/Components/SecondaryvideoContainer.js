@@ -4,14 +4,19 @@ import { useSelector } from 'react-redux'
 
 const SecondaryvideoContainer = () => {
 
-    const movies = useSelector(store=>store.movies?.nowPlayingadd)
+    const movies = useSelector(store => store.movies)
+    //  console.log(movies?.toprated ,"one")
+    //  if (!movies?.nowPlayingadd || !movies?.nowPopularMovies) return null
   return (
-  movies &&  <div>
-      <MoviesList title={"Now Playing"} movies={movies}/>
-      <MoviesList title={"Romantic"} movies={movies}/>
-      <MoviesList title={"Now Playing"} movies={movies}/>
-      <MoviesList title={"Now Playing"} movies={movies}/>
-      <MoviesList title={"Now Playing"} movies={movies}/>
+  movies &&  <div className=' bg-black'>
+    <div className='-mt-44 relative'>
+    <MoviesList title={"Now Playing"} movies={movies?.nowPlayingadd}/>
+      <MoviesList title={"Popular Movies"} movies={movies?.nowPopularMovies}/>
+      <MoviesList title={"Top Rated"} movies={movies?.toprated}/>
+      {/* <MoviesList title={"Now Playing"} movies={movies}/>
+      <MoviesList title={"Now Playing"} movies={movies}/> */}
+    </div>
+      
     </div>
   )
 }

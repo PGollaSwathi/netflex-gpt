@@ -2,14 +2,13 @@ import React from 'react'
 import MoviesCard from './MoviesCard'
 
 const MoviesList = ({title , movies}) => {
-    console.log(movies,"mo")
-    if (!movies) return null
+    // console.log(movies,"mo")
+    if (movies == null) return null ;
   return (
     <div >
-        <div className='flex'> 
-        <h1 className=''>{title}</h1>
-       
-        <div className='flex' >
+        <div > 
+        <h1 className='text-white'>{title}</h1>
+        <div className='flex overflow-x-scroll no-scrollbar' >
             {
                 movies.map(movie =>  <MoviesCard key={movie.id} photo={movie.poster_path}/>)
             }
